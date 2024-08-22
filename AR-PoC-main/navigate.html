@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css' type='text/css' />
+    <title>Mapbox Application</title>
+    <style>
+        body { margin: 0;}
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+        #ar {
+            position: fixed;
+            bottom: 25px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-image: url('./images/ar.png');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+    </style>
+</head>
+<script src="./js/script.js" defer></script>
+<body>
+    <!-- Go to the Index.html with button -->
+    <a href="index.html" id="ar"></a>
+    <div id='map'></div>
+</body>
+</html>

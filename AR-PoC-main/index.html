@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Navigation</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false;">
+        <a-entity camera>
+            <a-entity id="arrow" gltf-model="./glb-models/source/carArrow.glb" scale="0.1 0.1 0.1" position="0 0 -5" rotation="10 0 0"></a-entity>
+            <!-- <a-entity id="arrow" gltf-model="./glb-models/source/carArrow.glb" scale="0.1 0.1 0.1" position="0 0 -5" rotation="20 0 0"></a-entity> -->
+        </a-entity>
+    </a-scene>
+    
+    <div id="ui">
+        <img src="./images/address.png">
+        <div class="input-container">
+            <input type="text" id="destination" placeholder="Voer jouw bestemming in" />
+            <button id="speechBtn"><img src="./images/microphone.png" alt="Dictate"></button>
+        </div>
+        <button onclick="navigate()"><img src="./images/start.png"></button>
+        <!-- <div id="distance"></div> -->
+        
+        <!-- <div id="map"></div> -->
+    </div>
+    <a href="navigate.html" id="mapbox"><img src="./images/map.png" alt=""></a>
+    <button id="toggleMapBtn" class="toggle-on"></button>
+    <div id="map"></div>
+</body>
+</html>
